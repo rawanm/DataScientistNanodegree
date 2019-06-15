@@ -1,4 +1,6 @@
 # U.K. Traffic Accidents - Data Analysis (10+years)
+> Due to limited rendering; graphs will not render in github, so please use [npviewer](https://nbviewer.jupyter.org/github/rawanm/DataScientistNanodegree/blob/master/P4_WriteBlogPost/uk_traffic_accidents_data_analysis.ipynb), or simply click on icon at the top-right corner to explore the analysis in full details. 
+
 
 > This project (Write a Data Science Blog Post) is part of Udacity's Data Scientists Nanodegree Program. Detailed analysis with all needed code is posted in this Github repository.
 
