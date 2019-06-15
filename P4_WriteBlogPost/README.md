@@ -39,7 +39,7 @@ The motivation for the project is to study and understand the nature of car acci
 
 
 ## Results: 
-A summary of the results of the analysis is described in detailed as [Jupyter notebook](), and in this published [Medium blog post](). 
+A summary of the results of the analysis is described in detailed as [Jupyter notebook](https://github.com/rawanm/DataScientistNanodegree/blob/master/P4_WriteBlogPost/uk_traffic_accidents_data_analysis.ipynb), and in this published [Medium blog post](https://medium.com/@rawanme/u-k-traffic-accidents-data-analysis-10-years-c81293180ee5?postPublishedType=initial). 
 
 
 ## License and Acknowledgements: 
