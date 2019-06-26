@@ -12,7 +12,7 @@ def load_data(messages_filepath, categories_filepath):
         categories_filepath (str) categories .csv dataset filepath
 
     Returns:
-        messages and categories merged pandas dataframe 
+        df (pd.dataframe): messages and categories merged pandas dataframe 
     '''
 
     messages = pd.read_csv('./'+ messages_filepath)
@@ -29,7 +29,7 @@ def clean_categories_data(categories_df):
         categories_df (pd.dataframe): categories dataframe
 
     Returns:
-        cleaned categories pandas dataframe 
+        categories (pd.dataframe): cleaned categories pandas dataframe 
     '''
 
     categories = categories_df.str.split(';',expand=True)
@@ -54,7 +54,7 @@ def clean_data(df):
         df (pd.dataframe): merged dataframe
 
     Returns:
-        cleaned merged pandas dataframe 
+        df (pd.dataframe): cleaned merged pandas dataframe 
     '''
 
     # clean categories data and concat with main dataset: 
@@ -82,6 +82,9 @@ def save_data(df, database_filename):
     Args:
         df (pd.dataframe): merged and cleaned dataframe
         database_filename (str): sqlite database filename
+
+    Returns:
+        no returns
     '''
 
     # create sqlite database engine
@@ -89,7 +92,8 @@ def save_data(df, database_filename):
 
     # save dataframe to sqllite database and replace if exists
     df.to_sql('Messages', engine, index=False, if_exists='replace')
-    print ('Sample of saved data...'  + engine.execute("SELECT * FROM Messages").fetchall()[0])
+    print ('Sample of saved data...') 
+    print (engine.execute("SELECT * FROM Messages").fetchall()[0])
 
 def main():
     if len(sys.argv) == 4:
