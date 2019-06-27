@@ -10,6 +10,7 @@ from plotly.graph_objs import Bar
 from sklearn.externals import joblib
 from sqlalchemy import create_engine
 
+import os
 
 app = Flask(__name__)
 
@@ -25,13 +26,14 @@ def tokenize(text):
     return clean_tokens
 
 # load data
-db_dir = 'sqlite:///./data/DisasterResponse.db'
-print (db_dir)
+
+file_path = os.path.abspath(os.getcwd()).rsplit('/',1)[0] 
+db_dir = 'sqlite:///'+ file_path +"/data/DisasterResponse.db"
 engine = create_engine(db_dir)
 df = pd.read_sql_table('Messages', engine)
-print (df.head())
+
 # load model
-model = joblib.load("./models/classifier.pkl")
+model = joblib.load(file_path+ "/models/classifier.pkl")
 
 
 # index webpage displays cool visuals and receives user input text for model
@@ -43,7 +45,11 @@ def index():
     # TODO: Below is an example - modify to extract data for your own visuals
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
-    
+
+    categories = df.drop(['id','message','original','genre'], axis=1)
+    category_counts = categories.sum(axis= 0).sort_values(ascending=False)
+    category_names = list(category_counts.index)
+
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
@@ -62,6 +68,26 @@ def index():
                 },
                 'xaxis': {
                     'title': "Genre"
+                }
+            }
+        }, 
+         {
+            'data': [
+                Bar(
+                    x=category_names,
+                    y=category_counts
+                )
+            ],
+
+            'layout': {
+                'title': 'Distribution of Messages Categoty',
+                
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Category", 
+                    'automargin': True
                 }
             }
         }
