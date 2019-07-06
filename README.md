@@ -8,4 +8,5 @@ This Repository contains the projects I have worked on to complete Udacity "Data
 2. [Create Your Own Image Classifier](): will be uploaded later
 3. [Creating Customer Segments with Arvato](): will be uploaded later
 4. [Write A Data Science Blog Post](https://github.com/rawanm/DataScientistNanodegree/tree/master/P4_WriteBlogPost)
-5. [Disaster Response Pipelines](): will be uploaded later
+5. [Disaster Response Pipelines](https://github.com/rawanm/DataScientistNanodegree/tree/master/P5_DisasterResponsePipelines) 
+6. [Recommendations with IBM](https://github.com/rawanm/DataScientistNanodegree/tree/master/p6_IBMWatsonRecommendation)
