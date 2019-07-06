@@ -1,5 +1,7 @@
 # Data Scientist Nanodegree
-Udacity Data Scientist Nanodegree Projects
+"Gain real-world data science experience with projects designed by industry experts. Build your portfolio and advance your data science career."
+
+[Udacity](https://www.udacity.com/course/data-scientist-nanodegree--nd025)
 
 ## Projects:
 This Repository contains the projects I have worked on to complete Udacity "Data Scientist Nanodegree" program:
