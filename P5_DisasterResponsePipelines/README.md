@@ -1,5 +1,5 @@
 # Disaster Response Pipeline Project
-> This project (Write a Data Science Blog Post) is part of Udacity's Data Scientists Nanodegree Program. 
+> This project (Disaster Response Pipeline) is part of Udacity's Data Scientists Nanodegree Program. 
 
 ### Introduction: 
 This project builds a Disaster Response Pipeline as a web app. Users can enter new message and the system will analyze the text and display the relevent message category. This project analyzes disaster data and uses data from [Figure Eight](https://www.figure-eight.com) to build machine learning model that classifies messages. 
