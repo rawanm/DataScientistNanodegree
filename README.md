@@ -18,3 +18,6 @@ Creating a machine learning pipeline to categorize real messages that were sent 
 
 6. [Recommendations with IBM](https://github.com/rawanm/DataScientistNanodegree/tree/master/p6_IBMWatsonRecommendation): 
 Analyze the interactions that users have with articles on the IBM Watson Studio platform, and make recommendations to them about new articles you think they will like.
+
+7. [Data Scientist Capstone] (https://github.com/rawanm/DataScientistNanodegree/tree/master/p7_Capstone):
+Analyze Starbucks customers behavior and interactions with special offers sent on the app. 
